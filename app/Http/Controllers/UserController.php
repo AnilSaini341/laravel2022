@@ -13,4 +13,8 @@ class UserController extends Controller
     function show($id){
         return $id;
     } 
+
+    function loadView($name){
+        return view("user",['name'=>$name]);
+    }
 }

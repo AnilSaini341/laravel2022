@@ -28,6 +28,8 @@ Route::get('/contact', function () {  //redirect Function
 
 Route::get("user/{id}",[UserController::class,'show']); //Laravel 8 Contoller Calling Method
 
+Route::get("suser/{name}",[UserController::class,'loadView']);
+
 Route::get("users",'UserController@index'); //Laravel 7 Contoller Calling Method
 
 
