@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::view("about","/about"); //first page name second url of page
+Route::view("contact", "/contact");
+
+// Route::get('/{name}', function ($name) {   //Get Dynamic Data on page form URL
+//    // echo $name;
+//     return view('welcome',['name'=>$name]); //Key Value Pair
+// });
+
+Route::get('/', function () {  //Defaulf Function
+    return redirect('about');
 });
+
+ 
