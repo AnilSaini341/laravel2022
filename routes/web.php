@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,8 +22,18 @@ Route::view("contact", "/contact");
 //     return view('welcome',['name'=>$name]); //Key Value Pair
 // });
 
-Route::get('/', function () {  //Defaulf Function
+Route::get('/contact', function () {  //redirect Function
     return redirect('about');
 });
+
+Route::get("user/{id}",[UserController::class,'show']); //Laravel 8 Contoller Calling Method
+
+Route::get("users",'UserController@index'); //Laravel 7 Contoller Calling Method
+
+
+Route::get('/', function () {  //Defaulf Function
+    return view('welcome');
+});
+
 
  
