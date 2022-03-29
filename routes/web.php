@@ -30,6 +30,8 @@ Route::get("user/{id}",[UserController::class,'show']); //Laravel 8 Contoller Ca
 
 Route::get("suser/{name}",[UserController::class,'loadView']);
 
+Route::get("userdata",[UserController::class,'loadViewData']);
+
 Route::get("users",'UserController@index'); //Laravel 7 Contoller Calling Method
 
 
