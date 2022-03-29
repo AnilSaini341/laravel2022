@@ -38,6 +38,7 @@ Route::get("users",'UserController@index'); //Laravel 7 Contoller Calling Method
 Route::post("userform",[UserController::class,'UserLogin']);
 Route::view('userlogin','userlogin'); //first page url second page name
 
+Route::view('noaccess','noaccess');
 
 Route::get('/', function () {  //Defaulf Function
     return view('welcome');
