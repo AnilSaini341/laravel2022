@@ -17,4 +17,9 @@ class UserController extends Controller
     function loadView($name){
         return view("user",['name'=>$name]);
     }
+
+    function loadViewData(){
+        $data = ['anil','ram','shyam'];
+        return view("userdata",['users'=>$data]);
+    }
 }
