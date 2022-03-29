@@ -25,6 +25,10 @@ class UserController extends Controller
 
     function UserLogin(Request $req){
         //echo 'Form Submitted..';
+        $req->validate([
+            'username'=>'required | max:10',
+            'password'=>'required | min:3'
+        ]);
         return $req->input();
     }
 }
