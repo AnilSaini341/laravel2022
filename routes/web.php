@@ -14,17 +14,17 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::view("about","/about"); //first page name second url of page
-Route::view("contact", "/contact");
+Route::view("about","/about")->middleware("protectedUrls"); //first page name second url of page
+Route::view("contact", "/contact")->middleware("protectedUrls");;
 
 // Route::get('/{name}', function ($name) {   //Get Dynamic Data on page form URL
 //    // echo $name;
 //     return view('welcome',['name'=>$name]); //Key Value Pair
 // });
 
-Route::get('/contact', function () {  //redirect Function
-    return redirect('about');
-});
+// Route::get('/contact', function () {  //redirect Function
+//     return redirect('about');
+// });
 
 Route::get("user/{id}",[UserController::class,'show']); //Laravel 8 Contoller Calling Method
 
