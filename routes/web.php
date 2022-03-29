@@ -36,9 +36,15 @@ Route::get("users",'UserController@index'); //Laravel 7 Contoller Calling Method
 
 //GET POST Route for User Login Form 
 Route::post("userform",[UserController::class,'UserLogin']);
-Route::view('userlogin','userlogin'); //first page url second page name
+//Route::view('userlogin','userlogin'); //first page url second page name
 
 Route::view('noaccess','noaccess');
+
+// Group Route Example
+Route::group(['middleware'=>['protectedPage']],function(){
+    Route::view('userlogin','userlogin'); 
+});
+
 
 Route::get('/', function () {  //Defaulf Function
     return view('welcome');
