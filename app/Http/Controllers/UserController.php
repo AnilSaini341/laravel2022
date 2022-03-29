@@ -22,4 +22,9 @@ class UserController extends Controller
         $data = ['anil','ram','shyam'];
         return view("userdata",['users'=>$data]);
     }
+
+    function UserLogin(Request $req){
+        //echo 'Form Submitted..';
+        return $req->input();
+    }
 }

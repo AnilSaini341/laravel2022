@@ -34,6 +34,10 @@ Route::get("userdata",[UserController::class,'loadViewData']);
 
 Route::get("users",'UserController@index'); //Laravel 7 Contoller Calling Method
 
+//GET POST Route for User Login Form 
+Route::post("userform",[UserController::class,'UserLogin']);
+Route::view('userlogin','userlogin'); //first page url second page name
+
 
 Route::get('/', function () {  //Defaulf Function
     return view('welcome');
