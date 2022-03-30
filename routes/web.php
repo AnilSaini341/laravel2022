@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\personsContoller;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,8 @@ Route::get("suser/{name}",[UserController::class,'loadView']);
 Route::get("userdata",[UserController::class,'loadViewData']);
 
 Route::get("users",'UserController@index'); //Laravel 7 Contoller Calling Method
+
+Route::get("persons",[personsContoller::class,'index']);
 
 //GET POST Route for User Login Form 
 Route::post("userform",[UserController::class,'UserLogin']);
