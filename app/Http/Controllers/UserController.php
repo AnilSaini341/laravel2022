@@ -29,6 +29,11 @@ class UserController extends Controller
             'username'=>'required | max:10',
             'password'=>'required | min:3'
         ]);
-        return $req->input();
+        //return $req->input();
+
+        $data=  $req->input('username');
+        $req->session()->put("username",$data);
+        //echo session('username');
+        return redirect('persons');
     }
 }

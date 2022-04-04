@@ -44,10 +44,24 @@ Route::post("userform",[UserController::class,'UserLogin']);
 Route::view('noaccess','noaccess');
 
 // Group Route Example
-Route::group(['middleware'=>['protectedPage']],function(){
-    Route::view('userlogin','userlogin'); 
+
+// Route::group(['middleware'=>['protectedPage']],function(){
+//     Route::view('userlogin','userlogin'); 
+// });
+
+Route::get('/userlogin', function () {  //Logout Function
+    if(session()->has('username')){
+        return redirect('/persons');
+    }
+    return view('/userlogin');
 });
 
+Route::get('/logout', function () {  //Logout Function
+    if(session()->has('username')){
+        session()->pull('username',null);
+    }
+    return redirect('/userlogin');
+});
 
 Route::get('/', function () {  //Defaulf Function
     return view('welcome');

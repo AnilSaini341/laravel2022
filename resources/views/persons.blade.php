@@ -1,3 +1,4 @@
+<h2>Hi, {{session('username')}}</h2> <a href="/logout">Logout</a>
 <h3>Persons list</h3>
 <table border="1">
     <tr>
