@@ -33,6 +33,7 @@ class UserController extends Controller
 
         $data=  $req->input('username');
         $req->session()->put("username",$data);
+        $req->session()->flash('user',$data);
         //echo session('username');
         return redirect('persons');
     }

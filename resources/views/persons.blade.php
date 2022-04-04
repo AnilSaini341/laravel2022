@@ -1,4 +1,10 @@
-<h2>Hi, {{session('username')}}</h2> <a href="/logout">Logout</a>
+<h2>Hi, {{session('username')}}
+<h3>
+    @if(session('user'))
+    <b>Hello, {{session('user')}}</b>
+    @endif
+</h3>
+</h2> <a href="/logout">Logout</a>
 <h3>Persons list</h3>
 <table border="1">
     <tr>
