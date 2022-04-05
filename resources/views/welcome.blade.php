@@ -90,7 +90,8 @@
                     <a href="/about">About Us</a>
                     <a href="/contact">Contact Us</a>
                     <a href="/userlogin">Login</a>
-                    
+                    <a href="/userall">All Users</a>
+                    <a href="/memberslist">Members List</a>
                     {{-- <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
