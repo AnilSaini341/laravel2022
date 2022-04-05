@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 class UserController extends Controller
 {
 
@@ -36,5 +36,10 @@ class UserController extends Controller
         $req->session()->flash('user',$data);
         //echo session('username');
         return redirect('persons');
+    }
+
+    function getUsersDataFromDB(){
+       // return "Connect with DB";
+       return DB::select("select * from users");
     }
 }
