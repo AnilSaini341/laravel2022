@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Member;
 class UserController extends Controller
 {
 
@@ -41,5 +42,10 @@ class UserController extends Controller
     function getUsersDataFromDB(){
        // return "Connect with DB";
        return DB::select("select * from users");
+    }
+
+    function membersList(){
+        $data= Member::all();
+        return view("memberslist",['members'=>$data]);
     }
 }

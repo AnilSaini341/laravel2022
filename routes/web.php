@@ -39,6 +39,8 @@ Route::get("persons",[personsContoller::class,'index']);
 
 Route::get('/userall',[UserController::class,'getUsersDataFromDB']);
 
+Route::get('/memberslist',[UserController::class,'membersList']);
+
 //GET POST Route for User Login Form 
 Route::post("userform",[UserController::class,'UserLogin']);
 //Route::view('userlogin','userlogin'); //first page url second page name
