@@ -67,6 +67,9 @@ Route::get('/logout', function () {  //Logout Function
     return redirect('/userlogin');
 });
 
+Route::post('addmember',[personsContoller::class,'addPerson']);
+Route::view('addmember','addperson');
+
 Route::get('/', function () {  //Defaulf Function
     return view('welcome');
 });

@@ -91,6 +91,7 @@
                     <a href="/contact">Contact Us</a>
                     <a href="/userlogin">Login</a>
                     <a href="/userall">All Users</a>
+                    <a href="/addmember">Add Member</a>
                     <a href="/memberslist">Members List</a>
                     {{-- <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
