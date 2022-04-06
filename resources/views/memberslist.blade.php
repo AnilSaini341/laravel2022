@@ -15,3 +15,16 @@
      </tr> 
     @endforeach
 </table>
+
+<div>
+    {{-- Pagination  --}}
+    {{$members->links()}}
+</div>
+<style>
+    ul.pagination li {
+    display: inline;
+}
+    li.page-item {
+    list-style: none;
+}
+</style>
