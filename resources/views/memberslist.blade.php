@@ -5,6 +5,7 @@
         <th>Name</th>
         <th>E-mail</th>
         <th>Address</th>
+        <th>Operations</th>
     </tr>
     @foreach ($members as $item)
       <tr>
@@ -12,6 +13,7 @@
           <td>{{$item['name']}}</td>
           <td>{{$item['email']}}</td>
           <td>{{$item['address']}}</td>
+          <td><a href={{"deletemember/".$item['id']}}>Delete</a></td>
      </tr> 
     @endforeach
 </table>

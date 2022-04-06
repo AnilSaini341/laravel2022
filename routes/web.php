@@ -69,7 +69,7 @@ Route::get('/logout', function () {  //Logout Function
 
 Route::post('addmember',[personsContoller::class,'addPerson']);
 Route::view('addmember','addperson');
-
+Route::get('deletemember/{id}',[UserController::class,'deleteMember']);
 Route::get('/', function () {  //Defaulf Function
     return view('welcome');
 });

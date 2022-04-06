@@ -46,7 +46,13 @@ class UserController extends Controller
 
     function membersList(){
         // $data= Member::all();  Get All Data
-        $data= Member::paginate(2); //Get Data with pagination
+        $data= Member::paginate(5); //Get Data with pagination
         return view("memberslist",['members'=>$data]);
+    }
+
+    function deleteMember($id){
+        $data = Member::find($id);
+        $data->delete();
+        return redirect("memberslist");
     }
 }
