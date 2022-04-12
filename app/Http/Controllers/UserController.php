@@ -55,4 +55,17 @@ class UserController extends Controller
         $data->delete();
         return redirect("memberslist");
     }
+
+    function showMember($id){
+        $data= Member::find($id);
+        return view("editmember",["data"=>$data]);
+    }
+    function editMember(Request $req){
+        $data= Member::find($req->id);
+        $data->name=$req->name;
+        $data->email=$req->email;
+        $data->address=$req->address;
+        $data->save();
+        return redirect('memberslist');
+    }
 }

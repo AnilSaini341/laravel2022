@@ -13,7 +13,8 @@
           <td>{{$item['name']}}</td>
           <td>{{$item['email']}}</td>
           <td>{{$item['address']}}</td>
-          <td><a href={{"deletemember/".$item['id']}}>Delete</a></td>
+          <td><a href={{"deletemember/".$item['id']}}>Delete</a>
+            <a href={{"editmember/".$item['id']}}>Edit</a></td>
      </tr> 
     @endforeach
 </table>
