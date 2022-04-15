@@ -117,8 +117,16 @@ class UserController extends Controller
         //return DB::table('members')->max('id');
         //max
 
-        return DB::table('members')->avg('id');
+        //return DB::table('members')->avg('id');
         //Average
 
+
+        // Join Examples 
+        return DB::table('employee')
+        ->join('company','employee.id','=','company.employee_id') //join
+        ->select('company.*','employee.*')
+        ->where('employee.name','peter')
+        ->select('employee.name','company.c_name')
+        ->get();
     }
 }
