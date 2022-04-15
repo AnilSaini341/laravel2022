@@ -72,7 +72,7 @@ class UserController extends Controller
     function operations(){
         //return 'code will be here';
 
-         return DB::table('members')->get();   //get all records of member table
+         //return DB::table('members')->get();   //get all records of member table
 
         //return DB::table('members')->where('id',6)->get();   
         //get records with where clause
@@ -105,5 +105,20 @@ class UserController extends Controller
         // ->delete();
         // return json_encode($res);
         //Delete Command
+
+        //Aggrigate Functions Examples
+
+        //return DB::table('members')->sum('id'); 
+        //Sum
+
+        //return DB::table('members')->min('id'); 
+        //min
+
+        //return DB::table('members')->max('id');
+        //max
+
+        return DB::table('members')->avg('id');
+        //Average
+
     }
 }
