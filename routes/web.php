@@ -72,6 +72,9 @@ Route::view('addmember','addperson');
 Route::get('deletemember/{id}',[UserController::class,'deleteMember']);
 Route::get('editmember/{id}',[UserController::class,'showMember']);
 Route::post('editmember/',[UserController::class,'editMember']);
+
+Route::get('query-operations',[UserController::class,'operations']);
+
 Route::get('/', function () {  //Defaulf Function
     return view('welcome');
 });

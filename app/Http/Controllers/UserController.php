@@ -68,4 +68,42 @@ class UserController extends Controller
         $data->save();
         return redirect('memberslist');
     }
+
+    function operations(){
+        //return 'code will be here';
+
+         return DB::table('members')->get();   //get all records of member table
+
+        //return DB::table('members')->where('id',6)->get();   
+        //get records with where clause
+
+        //return (array)DB::table('members')->find(7);   //get records with find clause
+
+        //return DB::table('members')->count();   //use count clouse
+
+        // $res= DB::table('members')
+        // ->insert([
+        //     'name'=>'t5',
+        //     'email'=>'t5@gmail.com',
+        //     'address'=>'T5'
+        // ]);   
+        // return json_encode($res);
+        //insert Command
+
+        // $res= DB::table('members')
+        // ->where('id',13)
+        // ->update([
+        //     'name'=>'t15',
+        //     'email'=>'t15@gmail.com',
+        //     'address'=>'T151'
+        // ]);   
+        // return json_encode($res);
+        //Update Command
+
+        // $res= DB::table('members')
+        // ->where('id',13)
+        // ->delete();
+        // return json_encode($res);
+        //Delete Command
+    }
 }
