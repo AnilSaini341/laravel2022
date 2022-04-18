@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 12, 2022 at 11:14 AM
+-- Generation Time: Apr 15, 2022 at 02:26 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.1.30
 
@@ -21,6 +21,50 @@ SET time_zone = "+00:00";
 --
 -- Database: `laravel2022`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `company`
+--
+
+CREATE TABLE `company` (
+  `id` int(10) NOT NULL,
+  `c_name` varchar(30) NOT NULL,
+  `employee_id` int(10) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `company`
+--
+
+INSERT INTO `company` (`id`, `c_name`, `employee_id`, `created_at`, `updated_at`) VALUES
+(10, 'microsoft', 1, '2022-04-15 11:52:51', '2022-04-15 11:52:51'),
+(11, 'google', 2, '2022-04-15 11:52:51', '2022-04-15 11:52:51');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `employee`
+--
+
+CREATE TABLE `employee` (
+  `id` int(10) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `employee`
+--
+
+INSERT INTO `employee` (`id`, `name`, `email`, `created_at`, `updated_at`) VALUES
+(1, 'peter', 'peter@gmail.com', '2022-04-15 11:49:16', '2022-04-15 11:49:16'),
+(2, 'bruce', 'bruce@gmail.com', '2022-04-15 11:49:16', '2022-04-15 11:49:16');
 
 -- --------------------------------------------------------
 
@@ -50,7 +94,8 @@ INSERT INTO `members` (`id`, `name`, `email`, `address`, `created_at`, `updated_
 (6, 'shivam', 'shivam@gmail.com', 'sec 64', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (7, 'Deepak', 'Deepak@gmail.com', 'Delhi', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (8, 'john', 'hohn@gmail.com', 'Korea', '2022-04-05 18:30:00', '2022-04-05 18:30:00'),
-(11, 'subham', 'subham@gmail.com', 'Shri nager', '2022-04-06 07:36:25', '2022-04-06 07:36:25');
+(11, 'subham', 'subham@gmail.com', 'Shri nager', '2022-04-06 07:36:25', '2022-04-06 07:36:25'),
+(12, 'tilok', 'tilok@gmail.com', 'Tigaon', '2022-04-15 06:55:32', '2022-04-15 01:37:25');
 
 -- --------------------------------------------------------
 
@@ -80,6 +125,18 @@ INSERT INTO `users` (`id`, `name`, `email`, `address`) VALUES
 --
 
 --
+-- Indexes for table `company`
+--
+ALTER TABLE `company`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `employee`
+--
+ALTER TABLE `employee`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `members`
 --
 ALTER TABLE `members`
@@ -96,10 +153,22 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `company`
+--
+ALTER TABLE `company`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `employee`
+--
+ALTER TABLE `employee`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `members`
 --
 ALTER TABLE `members`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `users`
