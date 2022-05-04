@@ -94,6 +94,8 @@
                     <a href="/addmember">Add Member</a>
                     <a href="/memberslist">Members List</a>
                     <a href="/query-operations">Query Operations</a>
+                    <a href="/one-to-one">One To One</a>
+                    <a href="/one-to-many">One To Many</a>
                     {{-- <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>

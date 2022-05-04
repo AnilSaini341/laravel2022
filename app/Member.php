@@ -28,8 +28,15 @@ class Member extends Model
         return $this->attributes['address']= $value.", India";
     }
 
+    //One to One
     function companyData()
     {
         return $this->hasOne('App\Company'); 
+    }
+
+    //One to Many
+    function deviceData()
+    {
+        return $this->hasMany('App\Device');
     }
 }

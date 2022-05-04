@@ -81,6 +81,7 @@ Route::view('upload','upload');
 Route::post('upload',[uploadController::class,'index']);
 
 Route::get("one-to-one",[MemberController::class,'oneToOne']);
+Route::get("one-to-many",[MemberController::class,'ManytoOne']);
 
 Route::get('/', function () {  //Defaulf Function
     return view('welcome');

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2022 at 02:25 PM
+-- Generation Time: May 04, 2022 at 03:06 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.1.30
 
@@ -65,6 +65,31 @@ CREATE TABLE `company` (
 INSERT INTO `company` (`id`, `c_name`, `employee_id`, `created_at`, `updated_at`) VALUES
 (10, 'microsoft', 1, '2022-04-15 11:52:51', '2022-04-15 11:52:51'),
 (11, 'google', 2, '2022-04-15 11:52:51', '2022-04-15 11:52:51');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `devices`
+--
+
+CREATE TABLE `devices` (
+  `id` int(10) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `member_id` int(10) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `devices`
+--
+
+INSERT INTO `devices` (`id`, `name`, `member_id`, `created_at`, `updated_at`) VALUES
+(1, 'mobile', 1, '2022-05-04 12:57:52', '2022-05-04 12:57:52'),
+(2, 'laptop', 2, '2022-05-04 12:58:36', '2022-05-04 12:58:36'),
+(3, 'smart watch', 2, '2022-05-04 12:58:36', '2022-05-04 12:58:36'),
+(4, 'computer', 2, '2022-05-04 12:59:11', '2022-05-04 12:59:11'),
+(5, 'ipad', 1, '2022-05-04 12:59:11', '2022-05-04 12:59:11');
 
 -- --------------------------------------------------------
 
@@ -235,6 +260,12 @@ ALTER TABLE `company`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `devices`
+--
+ALTER TABLE `devices`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `employee`
 --
 ALTER TABLE `employee`
@@ -291,6 +322,12 @@ ALTER TABLE `companies`
 --
 ALTER TABLE `company`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `devices`
+--
+ALTER TABLE `devices`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `employee`

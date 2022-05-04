@@ -11,4 +11,9 @@ class MemberController extends Controller
     {
         return Member::find(2)->companyData;
     }
+
+    function ManytoOne()
+    { 
+        return Member::find(2)->deviceData;
+    }
 }
