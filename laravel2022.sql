@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2022 at 10:27 AM
+-- Generation Time: May 04, 2022 at 02:25 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.1.30
 
@@ -21,6 +21,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `laravel2022`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `companies`
+--
+
+CREATE TABLE `companies` (
+  `id` int(10) NOT NULL,
+  `c_name` varchar(30) NOT NULL,
+  `member_id` int(10) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `companies`
+--
+
+INSERT INTO `companies` (`id`, `c_name`, `member_id`, `created_at`, `updated_at`) VALUES
+(10, 'microsoft', 1, '2022-04-15 11:52:51', '2022-04-15 11:52:51'),
+(11, 'google', 2, '2022-04-15 11:52:51', '2022-04-15 11:52:51');
 
 -- --------------------------------------------------------
 
@@ -95,7 +117,13 @@ INSERT INTO `members` (`id`, `name`, `email`, `address`, `created_at`, `updated_
 (7, 'Deepak', 'Deepak@gmail.com', 'Delhi', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (8, 'john', 'hohn@gmail.com', 'Korea', '2022-04-05 18:30:00', '2022-04-05 18:30:00'),
 (11, 'subham', 'subham@gmail.com', 'Shri nager', '2022-04-06 07:36:25', '2022-04-06 07:36:25'),
-(12, 'tilok', 'tilok@gmail.com', 'Tigaon', '2022-04-15 06:55:32', '2022-04-15 01:37:25');
+(12, 'tilok', 'tilok@gmail.com', 'Tigaon', '2022-04-15 06:55:32', '2022-04-15 01:37:25'),
+(14, 'pankaj', 'pankaj@gmail.com', 'sector-65', '2022-04-19 03:47:33', '2022-04-19 03:55:06'),
+(15, 'abc', 'abc@gmail.com', 'Axz', '2022-04-19 03:54:31', '2022-04-19 03:54:31'),
+(16, 'deepa', 'deepa@gmail.com', 'Uchai', '2022-04-19 03:56:03', '2022-04-19 03:56:03'),
+(17, 'Mr. teeka', 'teeka@gmail.com', 'mandi, India', '2022-04-19 03:57:08', '2022-04-19 03:57:08'),
+(18, 'Mr. sanju', 'sanju@gmail.com', 'sector-6, India', '2022-04-19 03:59:53', '2022-04-19 03:59:53'),
+(19, 'Mr. Mr. dev', 'dev@gmail.com', 'dev D, India, India', '2022-05-04 06:23:17', '2022-05-04 06:23:40');
 
 -- --------------------------------------------------------
 
@@ -185,7 +213,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `address`) VALUES
-(1, 'Anil', 'anil@gmail.com', 'Faridabad'),
+(1, 'anil', 'anil@gmail.com', 'Faridabad'),
 (2, 'Rahul', 'rahul@gmail.com', 'Ballabgarh'),
 (3, 'Anoop', 'anoop@gmail.com', 'Palwal'),
 (4, 'Shiv', 'shiv@gmai.com', 'Sihi Gate');
@@ -193,6 +221,12 @@ INSERT INTO `users` (`id`, `name`, `email`, `address`) VALUES
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `companies`
+--
+ALTER TABLE `companies`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `company`
@@ -247,6 +281,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `companies`
+--
+ALTER TABLE `companies`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
 -- AUTO_INCREMENT for table `company`
 --
 ALTER TABLE `company`
@@ -262,7 +302,7 @@ ALTER TABLE `employee`
 -- AUTO_INCREMENT for table `members`
 --
 ALTER TABLE `members`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `migrations`

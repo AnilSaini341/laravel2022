@@ -27,4 +27,9 @@ class Member extends Model
     public function setAddressAttribute($value){
         return $this->attributes['address']= $value.", India";
     }
+
+    function companyData()
+    {
+        return $this->hasOne('App\Company'); 
+    }
 }

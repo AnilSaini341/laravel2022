@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\personsContoller;
 use App\Http\Controllers\uploadController;
+use App\Http\Controllers\MemberController;  
 
 /*
 |--------------------------------------------------------------------------
@@ -78,6 +79,8 @@ Route::get('query-operations',[UserController::class,'operations']);
 
 Route::view('upload','upload');
 Route::post('upload',[uploadController::class,'index']);
+
+Route::get("one-to-one",[MemberController::class,'oneToOne']);
 
 Route::get('/', function () {  //Defaulf Function
     return view('welcome');
