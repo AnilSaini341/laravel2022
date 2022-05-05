@@ -5,7 +5,8 @@ use Illuminate\Support\Str;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\personsContoller;
 use App\Http\Controllers\uploadController;
-use App\Http\Controllers\MemberController;  
+use App\Http\Controllers\MemberController; 
+use App\Http\Controllers\DeviceController; 
 
 /*
 |--------------------------------------------------------------------------
@@ -99,6 +100,9 @@ Route::post('upload',[uploadController::class,'index']);
 
 Route::get("one-to-one",[MemberController::class,'oneToOne']);
 Route::get("one-to-many",[MemberController::class,'ManytoOne']);
+
+Route::get('devices/{key}',[DeviceController::class,'index']);
+ //{key:name} //{key:member_id}
 
 Route::get('/', function () {  //Defaulf Function
     return view('welcome');
