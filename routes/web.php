@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\personsContoller;
 use App\Http\Controllers\uploadController;
@@ -16,6 +17,22 @@ use App\Http\Controllers\MemberController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+//Laravel String operations Examples
+
+//$info ="hi, anil saini";
+// $info=Str::ucfirst($info);
+// $info=Str::replaceFirst("Hi","Hello",$info);
+// $info=Str::camel($info);
+
+//Fluent String Operations Works in laravel 8 version
+
+// $info=Str::of($info)
+//  ->ucfirst($info)
+//  ->replaceFirst("Hi","Hello",$info)
+//  ->camel($info);
+// echo $info;
 
 Route::view("about","/about")->middleware("protectedUrls"); //first page name second url of page
 Route::view("contact", "/contact")->middleware("protectedUrls");;
