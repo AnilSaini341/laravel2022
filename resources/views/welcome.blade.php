@@ -98,7 +98,7 @@
                     <a href="/one-to-many">One To Many</a>
                     <a href="/devices/1">Devices</a>
                     <a href="api/dummy-data-api">Dummy Data Api</a>
-                    <a href="api/device-list">Dummy Data Api</a>
+                    <a href="api/device-list">Device Lists</a>
                     {{-- <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>

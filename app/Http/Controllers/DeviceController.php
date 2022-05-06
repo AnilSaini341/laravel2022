@@ -13,8 +13,8 @@ class DeviceController extends Controller
         return $key;
     }
 
-    function deviceList()
+    function deviceList($id=null)
     {
-        return Device::all();
+        return $id?Device::find($id):Device::all();
     }
 }

@@ -19,4 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('dummy-data-api',[DummyData::class,'getData']);
-Route::get('device-list',[DeviceController::class,'deviceList']);
+Route::get('device-list/{id?}',[DeviceController::class,'deviceList']);
