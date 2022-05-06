@@ -23,3 +23,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('dummy-data-api',[DummyData::class,'getData']);
 Route::get('device-list/{id?}',[DeviceController::class,'deviceList']);
 Route::post('add-device',[DeviceController::class,'addDevice']);
+Route::put('update-device',[DeviceController::class,'updateDevice']);

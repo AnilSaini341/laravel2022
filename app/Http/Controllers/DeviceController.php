@@ -32,4 +32,19 @@ class DeviceController extends Controller
             return ["error"=>"Please enter valid Data"];
         }
     }
+
+
+    function updateDevice(Request $req)
+    {
+        $device=Device::find($req->id);
+        $device->name=$req->name;
+        $device->member_id=$req->member_id;
+        $result=$device->save();
+        if($result){
+            return ["result"=>"Data has been updated"];
+        }else{
+            return ["result"=>"Update Operation failed"]; 
+        }
+        //return ["result"=>"Data has been updated"];
+    }
 }
