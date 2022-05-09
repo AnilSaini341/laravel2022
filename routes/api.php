@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use App\Http\Controllers\DummyData;
 use App\Http\Controllers\DeviceController;
+use App\Http\Controllers\CompanyController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -26,3 +27,8 @@ Route::post('add-device',[DeviceController::class,'addDevice']);
 Route::put('update-device',[DeviceController::class,'updateDevice']);
 Route::get('search-device/{name}',[DeviceController::class,'SearchDecice']);
 Route::post("add-valid-device",[DeviceController::class,'testData']);
+
+
+Route::get('company',[CompanyController::class,'index']);
+//Resource Routing Methods Not Working
+//Route::apiResource("company",CompanyController::class);
