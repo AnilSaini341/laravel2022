@@ -7,6 +7,7 @@ use App\Http\Controllers\personsContoller;
 use App\Http\Controllers\uploadController;
 use App\Http\Controllers\MemberController; 
 use App\Http\Controllers\DeviceController; 
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -103,6 +104,8 @@ Route::get("one-to-many",[MemberController::class,'ManytoOne']);
 
 Route::get('devices/{key}',[DeviceController::class,'index']);
  //{key:name} //{key:member_id}
+
+ Route::get('products-list',[ProductController::class,'productList']);
 
 Route::get('/', function () {  //Defaulf Function
     return view('welcome');
