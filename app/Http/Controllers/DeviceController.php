@@ -47,4 +47,9 @@ class DeviceController extends Controller
         }
         //return ["result"=>"Data has been updated"];
     }
+
+    function SearchDecice($name)
+    {
+        return Device::where("name","like","%".$name."%")->get();
+    }
 }

@@ -24,3 +24,4 @@ Route::get('dummy-data-api',[DummyData::class,'getData']);
 Route::get('device-list/{id?}',[DeviceController::class,'deviceList']);
 Route::post('add-device',[DeviceController::class,'addDevice']);
 Route::put('update-device',[DeviceController::class,'updateDevice']);
+Route::get('search-device/{name}',[DeviceController::class,'SearchDecice']);
