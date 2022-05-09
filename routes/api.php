@@ -25,3 +25,4 @@ Route::get('device-list/{id?}',[DeviceController::class,'deviceList']);
 Route::post('add-device',[DeviceController::class,'addDevice']);
 Route::put('update-device',[DeviceController::class,'updateDevice']);
 Route::get('search-device/{name}',[DeviceController::class,'SearchDecice']);
+Route::post("add-valid-device",[DeviceController::class,'testData']);
