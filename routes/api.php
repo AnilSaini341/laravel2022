@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\DummyData;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\FileController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -32,3 +33,5 @@ Route::post("add-valid-device",[DeviceController::class,'testData']);
 Route::get('company',[CompanyController::class,'index']);
 //Resource Routing Methods Not Working
 //Route::apiResource("company",CompanyController::class);
+
+Route::post('file-upload',[FileController::class,'upload']);
