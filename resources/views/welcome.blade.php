@@ -87,6 +87,8 @@
 
                 <div class="links">
                     <a href="/">Home</a>
+                    <a href="/home">Home</a>
+                    <a href="/school">Home</a>
                     <a href="/about">About Us</a>
                     <a href="/contact">Contact Us</a>
                     <a href="/userlogin">Login</a>
