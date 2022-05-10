@@ -68,6 +68,13 @@ Route::post("userform",[UserController::class,'UserLogin']);
 
 Route::view('noaccess','noaccess');
 
+Route::get('home',function(){
+    return view('home');
+});
+Route::get('school',function(){
+    return view('school');
+});
+
 // Group Route Example
 
 // Route::group(['middleware'=>['protectedPage']],function(){
